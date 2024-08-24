@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "foodskoof"
+version = "0.1.0"
+description = ""
+authors = ["Yooshyasha <maksimmorozov962@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.112.1"
+y24fw = {git = "https://github.com/Yooshyasha/y24FW.git"}
+uvicorn = "^0.30.6"
+tortoise = {extras = ["asyncpg"], version = "^0.1.1"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.4"
+
+[tool.poetry.scripts]
+foodskoof = "samplefastapiapp.main:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
